@@ -1,1 +1,581 @@
 /* You can add global styles to this file, and also import other style files */
+nav{
+    font-family: "Segoe UI Web Regular", "Segoe UI Regular WestEuropean", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+.page-section{
+    margin-top:57px
+}
+.panel-default {
+    border-color: #e2e9e6;
+}
+
+.homepage .head-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+.homepage .features p{
+    line-height: 26px;
+    color: #555;
+}
+.homepage .free-trail{
+    color: #fff;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.homepage .signup-form--round {
+    border-radius: 5px;
+    height: 45px;
+    overflow: hidden;
+}
+.homepage .signup-form {
+    display: inline-block;
+    position: relative;
+}
+
+.signup-form--round input[type=email] {
+    border-radius: 5px 0 0 5px;
+}
+@media (min-width: 768px) {
+    .signup-form input[type=text], .signup-form input[type=email] {
+        padding: 11px 25px 11px 15px;
+        min-width: 260px;
+    }
+}
+.signup-form input[type=text], .signup-form input[type=email] {
+    border: 1px solid #ccc;
+    border-right: 0;
+    font-size: 1.5rem;
+    float: left;
+    outline: 0;
+    background: #fff;
+    height: 37px;
+    padding: 5px 10px;
+    min-width: 210px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #1BBD36;
+    border-color: #4cae4c;
+}
+
+.signup-form input[type=submit] {
+    background-color: #1BBD36;
+    border-bottom: 2px solid #1BBD36;
+}
+
+.signup-form--round button, .signup-form--round input[type=submit] {
+    border: none;
+    border-radius: 0 5px 5px 0;
+    text-transform: none;
+}
+.signup-form input[type=submit] {
+    height: 37px;
+    text-transform: uppercase;
+}
+.signup-form button, .signup-form input[type=submit] {
+    font-size: 1.3rem;
+    line-height: 1.8461538462;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 0 .25rem;
+    padding: .625rem 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 0;
+    background-color: #1BBD36;
+    color: #fff;
+    border-bottom: 2px solid #1BBD36;
+    border-bottom-color: #4baf4c;
+    -webkit-appearance: none;
+}
+.login-button{
+    border: 2px solid #1BBD36;
+    border-radius: 4px;
+    background: white;
+    color: #1BBD36;
+    font-weight: 700;
+    padding: .5rem 1.25rem;
+}
+.login-button :hover{
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    padding: .5rem 1.25rem;
+    background: #1BBD36;
+}
+
+.homepage .head-wrapper h2 {
+    font-family: nexablack, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+    letter-spacing: -1.73px;
+    line-height: 45px;
+    margin: 0 0 30px;
+}
+
+.homepage .features h3{
+    color:#1BBD36;
+    font-size: 19px;
+}
+.homepage .head-wrapper p {
+    font-family: nexaxbold, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    margin: 0 0 40px;
+}
+
+.homepage .head-wrapper .button-group {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.homepage .head-wrapper .button-group .btn {
+    padding: 12px 24px;
+    font-size: 17px;
+}
+
+.button-group li:first-child {
+    margin-left: 0;
+}
+
+.button-group li {
+    display: inline-block;
+    margin: 0 9px;
+}
+
+.button-group li:last-child {
+    margin-right: 0;
+}
+
+.sub-menu-parent {
+    position: relative;
+}
+
+.sub-menu {
+    visibility: hidden; /* hides sub-menu */
+    opacity: 0;
+    padding-left: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-1em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+nav a {
+    display: block;
+    padding: 8px 4px;;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color:#5cb85c;
+}
+
+nav ul,
+nav ul li {
+    list-style-type: none;
+    padding: 0 16px;
+    margin: 0;
+}
+
+nav > ul {
+    background: #EEE;
+    text-align: center;
+}
+
+nav > ul > li {
+    display: inline-block;
+    border-left: solid 1px #aaa;
+}
+
+nav > ul > li:first-child {
+    border-left: none;
+}
+
+.sub-menu {
+    background: white;
+}
+
+.sub-menu-parent:hover .sub-menu {
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+.homepage .feature-section{
+    position: relative;
+    background-color: #fff;
+}
+.content {
+    background: url('./assets/images/home-page.jpg') center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 670px;
+    margin-top: 51px;
+}
+
+.homepage .head-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table-heading{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 1px solid white;
+}
+.principal .data-table tr{
+    height:44px
+}
+.principal .data-table td{
+    vertical-align: middle;
+}
+
+.ibox-content{
+    padding: 15px;
+    background-color: white;
+    border: 1px solid  #e2e9e6 ;
+}
+.table-sub-heading{
+    border-bottom: 1px solid white;
+}
+body{
+    overflow-x: hidden;
+}
+
+.aside-back-drop.in{
+    opacity: .1;
+}
+.profile-userpic{
+    margin-top:20px;
+}
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    margin-left: 126px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #5bc0de;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 12px;
+}
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5bc0de;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+.default-success{
+    border: 2px solid #1BBD36;
+    border-radius: 4px;
+    background: white;
+    color: #1BBD36;
+    font-weight: 700;
+    padding: .5rem 1.8rem;
+}
+.default-success:hover{
+    border: 2px solid #1BBD36;
+    border-radius: 4px;
+    background: #1BBD36;
+    color: white;
+    font-weight: 700;
+    padding: .5rem 1.8rem;
+}
+.pdl-none{
+    padding-left:0;
+}
+.pdr-none{
+    padding-right: 0;
+}
+.pdt-none{
+    padding-top:0
+}
+.pdb-none{
+    padding-bottom:0
+}
+.principal .table-filter{
+    padding:15px;
+}
+
+.table-filter .fa-plus{
+    font-size: 10px;
+    padding-right: 7px;
+}
+
+.default-button{
+    border-radius: 4px;
+    border: 2px solid #5bc0de;
+    color: #5bc0de;
+    background: white;
+    font-weight: 700;
+    padding: 0.5rem 1.8rem;
+}
+.default-button:hover{
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1.8rem;
+    background: #5bc0de;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #5bc0de;
+     border-color: #5bc0de;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+.circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    background: #000;
+    margin: 0 auto;
+}
+
+.bootstrapWizard {
+    display: block;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    width: 100%
+}
+
+.bootstrapWizard a:hover,.bootstrapWizard a:active,.bootstrapWizard a:focus {
+    text-decoration: none
+}
+
+.bootstrapWizard li {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-left: 0
+}
+
+.bootstrapWizard li:before {
+    border-top: 2px solid #55606E;
+    content: "";
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    top: 11px;
+    right: 1px;
+    width: 100%;
+    z-index: 1
+}
+
+.bootstrapWizard li:first-child:before {
+    left: 50%;
+    max-width: 50%
+}
+
+.bootstrapWizard li:last-child:before {
+    max-width: 50%;
+    width: 50%
+}
+
+.bootstrapWizard li.complete .step {
+    background: #1BBD36;
+    padding: 1px 6px;
+}
+
+.bootstrapWizard li .step i {
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    top: -1.5px
+}
+
+.bootstrapWizard li .step {
+    background: #B2B5B9;
+    color: #fff;
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 12px;
+    padding: 7px 13px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    transition: all .1s linear 0s
+}
+
+.bootstrapWizard li.active .step,.bootstrapWizard li.active.complete .step {
+    background: #1BBD36;
+    color: #fff;
+    font-weight: 700;
+    padding: 7px 13px;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.bootstrapWizard li.complete .title,.bootstrapWizard li.active .title {
+    color: #2B3D53
+}
+
+.bootstrapWizard li .title {
+    color: #bfbfbf;
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    max-width: 100%;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    top: 20px;
+    word-wrap: break-word;
+    z-index: 104
+}
+
+.wizard-actions {
+    display: block;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    width: 100%
+}
+
+.wizard-actions li {
+    display: inline
+}
+
+.tab-content.transparent {
+    background-color: transparent
+}
+.default-section{
+    margin-top: 8px;
+}
+.default-section #bootstrap-wizard-1{
+    background: white;
+    padding-top: 40px;
+}
+.m-b-20{
+    margin-bottom: 20px;
+}
+.p-l-none{
+    padding-left:0 !important
+}
+.p-r-none{
+    padding-right:0 !important
+}
+.p-b-none{
+    padding-bottom:0 !important
+}
+.p-t-none{
+    padding-top:0 !important
+}
+.default-blue{
+    color: #5bc0de
+}
+.default-green{
+   color: #1BBD36;
+}
+a{
+    cursor: pointer
+}
+/*End Wizard*/

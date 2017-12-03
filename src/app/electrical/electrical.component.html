@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div class="container"style="padding-top:70px">
+  <div class="row">
+    <div class="col-md-12 text-center electrical-service">
+        <h3 >Electrical Services</h3>
+        <h4 class="default-blue" style="margin-bottom:40px">All electrical services under one umbrella</h4>
+        <div class="col-md-3">
+            <div class="panel panel-default" >
+              <div class="panel-body text-center" (click)="modal1.show()">
+                <img class="" src="../assets/images/wiring.svg" height="50" width="50">
+                <h4 class="text-center features-title"><span>Wiring/Switching</span></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body text-center"  (click)="modal1.show()">
+                  <img class="" src="../assets/images/television.svg" height="50" width="50">
+                  <h4 class="text-center features-title"><span>TV</span></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                  <div class="panel-body text-center" (click)="modal1.show()" >
+                    <img class="" src="../assets/images/refrigerator.svg" height="50" width="50">
+                    <h4 class="text-center features-title"><span>Refrigerator</span></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body text-center"  (click)="modal1.show()">
+                      <img class="" src="../assets/images/cooler.svg" height="50" width="50">
+                      <h4 class="text-center features-title"><span>Fan/Cooler</span></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                      <div class="panel-body text-center"  (click)="modal1.show()">
+                        <img class="" src="../assets/images/air-conditioning.svg" height="50" width="50">
+                        <h4 class="text-center features-title"><span>Air Conditioning</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="panel panel-default">
+                        <div class="panel-body text-center"  (click)="modal1.show()">
+                          <img class="" src="../assets/images/blender.svg" height="50" width="50">
+                          <h4 class="text-center features-title"><span>Mixer/Iron</span></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                          <div class="panel-body text-center"  (click)="modal1.show()">
+                            <img class="" src="../assets/images/microwave-oven.svg" height="50" width="50">
+                            <h4 class="text-center features-title"><span>Microwave oven/ Electric Pan</span></h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="panel panel-default">
+                            <div class="panel-body text-center"  (click)="modal1.show()">
+                              <img class="" src="../assets/images/music-player.svg" height="50" width="50">
+                              <h4 class="text-center features-title"><span>Others</span></h4>
+                            </div>
+                          </div>
+                        </div>
+    </div>
+  </div>
+</div>
+
+<app-modal #modal1>
+  <div class="app-modal-header">
+    <div class="row">
+      <div class="col-md-6 default-blue">
+          <h4>Electric Service </h4>
+      </div>
+      <div class="col-md-6 text-right">
+        <a (click)="modal1.hide()"><i class="fa fa-times text-warning"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="app-modal-body">
+    <label>Select City</label>
+    <input class="form-control" type="text">
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-warning" (click)="modal1.hide()">Close</button>
+    <button type="button" class="btn btn-success" (click)="modal1.hide()">Book</button>
+  </div>
+</app-modal>
+

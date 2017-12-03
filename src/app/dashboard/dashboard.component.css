@@ -1,0 +1,76 @@
+.dashboard .panel-body{
+    min-height: 180px;
+    padding-top:18px
+}
+.features-title{
+    color:#1BBD36;
+    margin-top:30px
+}
+
+.panel-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 260px;
+        flex-basis: 260px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    height: 200px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ecf0f7;
+    background: white;
+    box-shadow: inset 0px 0px 0px 1px #edeef4;
+    -webkit-transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+    transition: text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+    transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
+    transition: transform 0.14s ease-in, text-shadow 0.1s ease-in, -webkit-transform 0.14s ease-in;
+    will-change: transform;
+    cursor: pointer;
+  }
+  .panel-body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: none;
+    border-radius: 3px;
+    box-shadow: 0 10px 24px 0px rgba(0, 0, 0, 0.02), 0 8px 20px -2px rgba(0, 0, 0, 0.06), 0 6px 10px -6px rgba(0, 0, 0, 0.1);
+    -webkit-transition: opacity 0.1s ease-in;
+    transition: opacity 0.1s ease-in;
+    will-change: opacity;
+    opacity: 0;
+  }
+  .panel-body:hover {
+    border-bottom: 4px solid #5bc0de;
+    -webkit-transform: translate(0, -4px);
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate(0, -4px);
+    transform: translate3d(0, -4px, 0);
+  }
+  .panel-body:hover:before {
+    opacity: 1;
+  }
+  .panel{
+      border:0
+  }

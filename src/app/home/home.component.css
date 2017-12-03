@@ -1,0 +1,54 @@
+.homepage .how-it-works h3{
+     font-size:20px;
+     color:#5bc0de;
+}
+.w3l_header {
+    letter-spacing: 1px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.homepage h3.w3l_header.w3_agileits_header.two span {
+    color: #ff4c4c;
+    font-weight: 400;
+}
+.w3l_header:after {
+    border-top: 2px solid #ff4c4c;
+    display: block;
+    width: 81px;
+    content: "";
+    margin: 8px auto 0;
+}
+.banner-wrap {
+    padding: 0 0 4em;
+}
+.clients p {
+    background: url('https://p.w3layouts.com/demos_new/template_demo/27-11-2017/fabricator-demo_Free/874225937/web/images/quotes.png') no-repeat 0px 0px;
+    background-size: 24px;
+}
+.clients p {
+    margin-bottom: 20px;
+    color: #6d6d6d;
+    letter-spacing: .5px;
+    line-height: 26px;
+    font-size: 15px;
+    padding-left: 2.5em;
+}
+.c-img{
+    border:1px solid blue;
+    padding: 2px;
+    height: 60px;
+    width: 60px;
+    border-radius:50%
+
+}
+.clients h5 {
+    text-align: left;
+    font-size: 16px;
+    color: #999;
+    text-transform: capitalize;
+}
+.clients h4{
+    margin-top:3px;
+    color:#5bc0de
+}

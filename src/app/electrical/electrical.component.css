@@ -1,0 +1,8 @@
+.electrical-service .panel{
+    min-height:180px;
+    padding-top:28px;
+    cursor: pointer
+}
+.features-title{
+    margin-top: 25px;
+}
