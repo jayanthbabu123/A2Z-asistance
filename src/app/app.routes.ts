@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {RouterModule,Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 // components
 import { AppComponent } from './app.component';
@@ -11,21 +11,62 @@ import { ElectricalComponent } from './electrical/electrical.component';
 import { PlumbingComponent } from './plumbing/plumbing.component';
 import { HomeCleaningComponent } from './home-cleaning/home-cleaning.component';
 import { MarriagesComponent } from './marriages/marriages.component';
+import { AboutComponent } from './about/about.component';
 
-export const routes:Routes=[
-    {path: '', redirectTo: 'home',pathMatch: 'full' },
-    {path:'home',component: HomeComponent},
-    {path:'dashboard', component:DashboardComponent},
-    {path:'login', component:LoginComponent},
-    {path:'signup', component:SignupComponent},
-    {path:'electrical', component:ElectricalComponent},
-    {path:'plumbing', component:PlumbingComponent},
-    {path:'home-cleaning', component:HomeCleaningComponent},
-    {path:'marriages', component:MarriagesComponent},
+export const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: 'dashboard',
+        component: DashboardComponent,
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'signup',
+        component: SignupComponent
+    },
+    {
+        path: 'about',
+        component: AboutComponent
+    },
+    {
+        path: 'electrical',
+        component: ElectricalComponent,
+        data: {
+            breadcrumb: "Electrical"
+        }
+    },
+    {
+        path: 'plumbing',
+        component: PlumbingComponent,
+        data: {
+            breadcrumb: "Plumbing"
+        }
+    },
+    {
+        path: 'home-cleaning',
+        component: HomeCleaningComponent,
+        data: {
+            breadcrumb: "Home cleaning"
+        }
+    },
+    {
+        path: 'marriages',
+        component: MarriagesComponent,
+        data: {
+            breadcrumb: "Marriages"
+        }
+    },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, )],
     exports: [RouterModule]
 })
 export class AppRoutingModule {
