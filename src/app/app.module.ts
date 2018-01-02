@@ -19,10 +19,13 @@ import { PlumbingComponent } from './plumbing/plumbing.component';
 import { HomeCleaningComponent } from './home-cleaning/home-cleaning.component';
 import { MarriagesComponent } from './marriages/marriages.component';
 import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
+import { WashingComponent } from './washing/washing.component';
+import { ComputerComponent } from './computer-repair/computer-repair.component';
 
 // services
 import { ModaldataService } from './modaldata.service';
 import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { AboutComponent } from './about/about.component';
     MarriagesComponent,
     BreadcrumbComponent,
     AboutComponent,
-    
+    WashingComponent,
+    ComputerComponent
   ],
   imports: [
     BrowserModule,

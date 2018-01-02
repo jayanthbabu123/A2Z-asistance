@@ -4,11 +4,11 @@ import { ModaldataService } from './../modaldata.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-home-cleaning',
-  templateUrl: './home-cleaning.component.html',
-  styleUrls: ['./home-cleaning.component.css']
+  selector: 'app-washing',
+  templateUrl: './washing.component.html',
+  styleUrls: ['./washing.component.css']
 })
-export class HomeCleaningComponent implements OnInit {
+export class WashingComponent implements OnInit {
   public selectedService: any;
   public address: any;
   public options: any;
@@ -35,12 +35,14 @@ export class HomeCleaningComponent implements OnInit {
 
   }
   public features = [
-    { id: "1", title: "Complete Home Cleaning", url: "../assets/images/house.svg" },
-    { id: "2", title: "Septic Tank", url: "../assets/images/tank-truck.svg" },
-    { id: "3", title: "Kitchen cleaning", url: "../assets/images/sweeping-person.svg" },
-    { id: "4", title: "Bathroom Cleaning", url: "../assets/images/soap.svg" },
-    { id: "5", title: "House Keeping", url: "../assets/images/vacuum-cleaner.svg" },
-    { id: "6", title: "Others", url: "../assets/images/music-player.svg" }
+    { id: "1", title: "Wash/Iron", url: "../assets/images/iron.svg" },
+    { id: "2", title: "Dry Cleaning", url: "../assets/images/suit.svg" },
+    { id: "3", title: "Blankets", url: "../assets/images/blanket.svg" },
+    { id: "4", title: "Carpets", url: "../assets/images/carpet.svg" },
+    { id: "5", title: "Curtains", url: "../assets/images/windows.svg" },
+    { id: "6", title: "Furniture", url: "../assets/images/chair.svg" },
+    { id: "7", title: "Leather Items", url: "../assets/images/leather-jacket.svg" },
+    { id: "8", title: "Others", url: "../assets/images/silk.svg" }
   ]
   public myDatePickerOptions: IMyDpOptions = {
     dateFormat: 'dd.mm.yyyy'

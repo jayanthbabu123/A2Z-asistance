@@ -4,54 +4,80 @@
     <div class="col-md-12 text-center plumbing-service">
       <h3>Plumbing Services</h3>
       <h4 class="default-blue" style="margin-bottom:40px">All plumbing services under one umbrella</h4>
-      <div class="col-md-3">
+      <div class="col-md-3" *ngFor="let data of features">
         <div class="panel panel-default">
-          <a class="panel-body text-center">
-                <img class="" src="../assets/images/piping.svg" height="50" width="50">
-                <h4 class="text-center features-title"><span>Piping</span></h4>
-              </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <a class="panel-body text-center">
-                  <img class="" src="../assets/images/shower.svg" height="50" width="50">
-                  <h4 class="text-center features-title"><span>Bathroom Fittings</span></h4>
-                </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <a class="panel-body text-center">
-                    <img class="" src="../assets/images/cutlery.svg" height="50" width="50">
-                    <h4 class="text-center features-title"><span>Kitchen Fitting</span></h4>
-                  </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <a class="panel-body text-center">
-                      <img class="" src="../assets/images/toolbox.svg" height="50" width="50">
-                      <h4 class="text-center features-title"><span>Minor Repair</span></h4>
-                    </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <a class="panel-body text-center">
-                        <img class="" src="../assets/images/tap.svg" height="50" width="50">
-                        <h4 class="text-center features-title"><span>Taps</span></h4>
-                      </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <a class="panel-body text-center">
-                          <img class="" src="../assets/images/repairing.svg" height="50" width="50">
-                          <h4 class="text-center features-title"><span>Others</span></h4>
-                        </a>
+          <div class="panel-body text-center" (click)="modal1.show(data)">
+            <img class="" src="{{data.url}}" height="50" width="50">
+            <h4 class="text-center features-title"><span>{{data.title}}</span></h4>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<app-modal #modal1>
+  <div class="app-modal-header">
+    <div class="row">
+      <div class="col-md-6 default-blue" *ngIf="selectedService">
+        <h4 class="margin-none">{{selectedService.title}} Service </h4>
+      </div>
+      <div class="col-md-6 text-right">
+        <a (click)="modal1.hide()"><i class="fa fa-times text-white
+          "></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="app-modal-body">
+    <div class="row">
+       <div class="col-md-12 text-center jumbotron" *ngIf="selectedService" style="margin-bottom:20px">
+          <img class="" src="{{selectedService.url}}" height="50" width="50">
+          <h4 class="text-center features-title"><span>{{selectedService.title}}</span></h4>
+      </div>  
+      <div class="col-md-12">
+          <h5><strong>Description:</strong><span style="line-height:22px;color:#74777b"> Agile software development refers to a group of
+              software development methodologies based on iterative development, 
+              where requirements and solutions evolve
+              through collaboration between self-organizing cross-functional teams.</span> </h5>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="col-md-12 m-b-15">
+        <div class="col-md-6 p-l-none">
+          <label>First Name</label>
+          <input class="form-control" placeholder="Enter firstname">
+        </div>
+        <div class="col-md-6 p-r-none">
+          <label>Last Name</label>
+          <input class="form-control" placeholder="Enter lastname">
+        </div>
+      </div>
+      <div class="col-md-12 m-b-15">
+        <div class="col-md-6 p-l-none">
+          <label>Mobile No</label>
+          <input class="form-control" placeholder="Enter mobile number" type="number">
+        </div>
+        <div class="col-md-6 p-r-none">
+          <form #myForm="ngForm" novalidate>
+            <label>Select Date</label>
+            <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label>Select City</label>
+        <input class="form-control" type="text" [(ngModel)]="address" [options]='options' (setAddress)="getAddress($event)" (street_number)='street_number=$event'
+          (street)='street=$event' (city)='city=$event' (state)='state=$event' (district)='district=$event' (country)='country=$event'
+          (postal_code)='postal_code=$event' (lat)='lat=$event' (lng)='lng=$event' (adr_address)='adr_address=$event' (name)='name=$event'
+          (place_id)='place_id=$event' (types)='types=$event' (url)='url=$event' (utc_offset)='utc_offset=$event' (vicinity)='vicinity=$event'
+          (photos)='photos=$event' (airport)='airport=$event' (CountryCodes)='CountryCodes=$event' id="autocomplete" ng2-google-place-autocomplete/>
+      </div>
+    </div>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-warning" (click)="modal1.hide()">Close</button>
+    <button type="button" class="btn btn-success" (click)="modal1.hide()">Book</button>
+  </div>
+</app-modal>

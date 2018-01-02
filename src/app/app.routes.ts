@@ -12,6 +12,8 @@ import { PlumbingComponent } from './plumbing/plumbing.component';
 import { HomeCleaningComponent } from './home-cleaning/home-cleaning.component';
 import { MarriagesComponent } from './marriages/marriages.component';
 import { AboutComponent } from './about/about.component';
+import { WashingComponent } from './washing/washing.component';
+import { ComputerComponent } from './computer-repair/computer-repair.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -63,6 +65,20 @@ export const routes: Routes = [
             breadcrumb: "Marriages"
         }
     },
+    {
+        path: 'washing',
+        component: WashingComponent,
+        data: {
+            breadcrumb: "Washing"
+        }
+    },
+    {
+        path: 'computer-repair',
+        component: ComputerComponent,
+        data: {
+            breadcrumb: "Computer Repair"
+        }
+    }
 ];
 
 @NgModule({

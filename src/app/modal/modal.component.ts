@@ -53,7 +53,6 @@ export class ModalComponent {
 
   public show(value: any): void {
     this.selectedValue=value;
-    console.log(value);
     this.modalService.selectedData(value);
     this.visible = true;
     setTimeout(() => this.visibleAnimate = true, 100);

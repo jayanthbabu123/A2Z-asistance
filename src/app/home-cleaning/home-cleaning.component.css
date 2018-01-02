@@ -1,7 +1,35 @@
 .cleaning-service .panel{
     min-height:180px;
     padding-top:28px;
+    cursor: pointer
 }
 .features-title{
     margin-top: 25px;
 }
+
+#autocomplete {
+    top: 0px;
+    left: 0px;
+    width: 99%;
+    z-index:1070
+  }
+  .modal{
+      z-index: 10;
+  }
+  label{
+      color: #4183C4
+  }
+  .app-modal-header h4{
+      margin: 3px 0;
+      color:white
+  }
+  .m-b-15{
+    margin-bottom:15px
+  }
+
+  @media screen and (min-width: 768px){
+    .jumbotron {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+  }
