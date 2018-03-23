@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { GooglePlaceModule } from 'ng2-google-place-autocomplete';
 import { MyDatePickerModule } from 'mydatepicker';
-import { AppRoutingModule } from './app.routes'
+import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
 import { HomeComponent } from './home/home.component';
@@ -22,9 +24,11 @@ import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { WashingComponent } from './washing/washing.component';
 import { ComputerComponent } from './computer-repair/computer-repair.component';
 
+
 // services
 import { ModaldataService } from './modaldata.service';
 import { AboutComponent } from './about/about.component';
+import { CommonHeaderComponent } from './common/common-header/common-header.component';
 
 
 @NgModule({
@@ -45,19 +49,26 @@ import { AboutComponent } from './about/about.component';
     BreadcrumbComponent,
     AboutComponent,
     WashingComponent,
-    ComputerComponent
+    ComputerComponent,
+    CommonHeaderComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     GooglePlaceModule,
     MyDatePickerModule,
+    ToastModule.forRoot()
   ],
   providers: [
-    { provide: LocationStrategy, 
-      useClass: HashLocationStrategy},
-      ModaldataService 
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    },
+    ModaldataService
   ],
   bootstrap: [AppComponent]
 })

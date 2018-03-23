@@ -11,10 +11,9 @@ interface IBreadcrumb {
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.css']
 })
-export class BreadcrumbComponent implements OnInit {
+export class BreadcrumbComponent implements OnInit, DoCheck {
   @ViewChild('breadcrumb') bread:ElementRef;
     public breadcrumbs: IBreadcrumb[];
-  
     constructor(
       private activatedRoute: ActivatedRoute,
       public router: Router
@@ -23,8 +22,7 @@ export class BreadcrumbComponent implements OnInit {
     }
     ngDoCheck(){
       setTimeout(()=>{
-      
-        if(this.router.url === '/home' || this.router.url === '/dashboard'){
+        if(this.router.url === '/home' || this.router.url === '/dashboard' || this.router.url === '/login'|| this.router.url === '/signup' || this.router.url === '/about'){
           this.bread.nativeElement.style.display="none";
         } else{
           this.bread.nativeElement.style.display="block"

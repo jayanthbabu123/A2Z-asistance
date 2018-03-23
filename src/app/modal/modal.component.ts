@@ -46,7 +46,6 @@ export class ModalComponent {
   selectedValue:any;
   public visible = false;
   public visibleAnimate = false;
-
   constructor(public modalService:ModaldataService){
 
   }

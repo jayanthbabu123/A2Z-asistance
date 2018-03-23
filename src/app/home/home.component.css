@@ -53,3 +53,145 @@
     margin-top:3px;
     color:#5bc0de
 }
+
+
+
+/* new */
+
+.Header {
+  position: relative;
+  height: 400px;
+  display: block;
+}
+.Header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(19deg, #21d4fd, #b721ff);
+  -webkit-transform-origin: 0px 0px;
+          transform-origin: 0px 0px;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  overflow: hidden;
+  z-index: -1;
+}
+.Header-background::before,
+.Header-background::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 80%;
+  height: 33.333333333333336%;
+  opacity: 0.3;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+}
+.Header-background::before {
+  background: #21d4fd;
+  right: 0;
+}
+.Header-background::after {
+  background: var(--color-2);
+  bottom: 0;
+}
+.Header-content {
+  text-align: center;
+  padding: 4rem 4rem;
+  margin: 0 auto;
+}
+@media (min-width: 58rem) {
+  .Header-content {
+    text-align: left;
+    padding: 5rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.Header-hero h1,
+.Header-hero p {
+  color: #fff;
+  text-shadow: 0 0.5rem 1rem rgba(50,0,100,0.1);
+}
+.Header-hero h1 {
+  font-size: 3.7rem;
+}
+.Header-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.Header-visuals {
+  position: relative;
+  margin-top: 5rem;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+@media (min-width: 58rem) {
+  .Header-visuals {
+    margin: 0;
+    -webkit-transform: translateY(-5rem) rotate(-10deg);
+            transform: translateY(-5rem) rotate(-10deg);
+  }
+}
+.Button {
+  padding: 1.5rem 2rem;
+  border: 0;
+  color: #08aeea;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1.75rem 2rem -0.4rem rgba(50,0,100,0.15);
+          box-shadow: 0 1.75rem 2rem -0.4rem rgba(50,0,100,0.15);
+}
+.Button:hover {
+  color: #2af598;
+  -webkit-box-shadow: 0 1.75rem 3rem 0rem rgba(50,0,100,0.1);
+          box-shadow: 0 1.75rem 3rem 0rem rgba(50,0,100,0.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.Button:active {
+  -webkit-box-shadow: 0 1.75rem 2.5rem -0.2rem rgba(50,0,100,0.125);
+          box-shadow: 0 1.75rem 2.5rem -0.2rem rgba(50,0,100,0.125);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+.Iphone {
+  display: inline-block;
+  background: #fff;
+  padding: 4rem 0.6rem 0;
+  border-radius: 2rem;
+  -webkit-box-shadow: -1rem 1.75rem 2rem -0.4rem rgba(50,0,100,0.1), -0.2rem 0.2rem 0.5rem rgba(50,0,100,0.05), inset 0.5rem -0.5rem 0.5rem -0.4rem rgba(50,0,100,0.1);
+          box-shadow: -1rem 1.75rem 2rem -0.4rem rgba(50,0,100,0.1), -0.2rem 0.2rem 0.5rem rgba(50,0,100,0.05), inset 0.5rem -0.5rem 0.5rem -0.4rem rgba(50,0,100,0.1);
+  text-align: center;
+}
+.Iphone::before,
+.Iphone::after {
+  content: '';
+  display: block;
+}
+.Iphone::before {
+  background-color: #08aeea;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#08aeea), to(#2af598));
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  width: 16rem;
+  padding-top: 177.5%;
+}
+.Iphone::after {
+  display: inline-block;
+  margin: 0.6rem;
+  padding: 1.4rem;
+  border: 1px solid #f1f1f1;
+  border-radius: 2rem;
+  -webkit-box-shadow: inset -0.05rem 0.05rem 0.5rem 0rem rgba(50,0,100,0.05);
+          box-shadow: inset -0.05rem 0.05rem 0.5rem 0rem rgba(50,0,100,0.05);
+}
